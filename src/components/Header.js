@@ -1,8 +1,9 @@
 //Librairies
 import React from 'react';
+import styled from "styled-components";
 import {FiShoppingCart} from "react-icons/fi";
 import {BiSearchAlt} from "react-icons/bi";
-import styled from "styled-components";
+import {Link} from "react-router-dom";
 
 //Image
 import logoShop from "../asset/images/logo.png";
@@ -11,10 +12,11 @@ import logoShop from "../asset/images/logo.png";
 const Header = () => {
     return (
             <SectionHeader>
-                <div className="header-logo">
-                    <img src={logoShop} width="120"/>
-                </div>
-
+                <Link to="/" style={{textDecoration:'none'}}>
+                    <div className="header-logo">
+                        <img src={logoShop} width="120"/>
+                    </div>
+                </Link>
                 <div className="header-search">
                     <input type="text" className="input-search"></input>
                     <BiSearchAlt className="header-logoSearch"/>
@@ -29,10 +31,13 @@ const Header = () => {
                         <span className="item-one">Your</span>
                         <span className="item-two">Shop</span>
                     </div>
-                    <div className="item-basket">
-                        <FiShoppingCart size={35}/>
-                        <span className="item-basket basketCount">0</span>
-                    </div>
+
+                    <Link to="checkout" style={{textDecoration:'none'}}>
+                        <div className="item-basket">
+                            <FiShoppingCart size={35}/>
+                            <span className="item-basket basketCount">0</span>
+                        </div>
+                    </Link>
 
                 </div>
             </SectionHeader>
