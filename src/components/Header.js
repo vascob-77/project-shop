@@ -47,6 +47,7 @@ const SectionHeader = styled.section`
   top:0;
   z-index: 100;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background: white;
   .header-logo{
     display: flex;
     align-items: center;
