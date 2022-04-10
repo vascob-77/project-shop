@@ -4,12 +4,15 @@ import styled from "styled-components";
 import {FiShoppingCart} from "react-icons/fi";
 import {BiSearchAlt} from "react-icons/bi";
 import {Link} from "react-router-dom";
-
+import { useStateValue } from "../context/StateProvider";
 //Image
 import logoShop from "../asset/images/logo.png";
 
 
 const Header = () => {
+
+    const [{basket}, dispatch] = useStateValue()
+
     return (
             <SectionHeader>
                 <Link to="/" style={{textDecoration:'none'}}>
@@ -35,7 +38,7 @@ const Header = () => {
                     <Link to="checkout" style={{textDecoration:'none'}}>
                         <div className="item-basket">
                             <FiShoppingCart size={35}/>
-                            <span className="item-basket basketCount">0</span>
+                            <span className="item-basket basketCount">{basket.length}</span>
                         </div>
                     </Link>
 

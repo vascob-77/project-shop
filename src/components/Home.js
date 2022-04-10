@@ -1,13 +1,14 @@
 import React from 'react';
 import Product from "./Product";
 import styled from "styled-components";
+import { v4 as uuidv4 } from 'uuid';
 
 const Home = () => {
     return (
             <SectionHome>
                 <div className="home-container">
                     <div className="home-row">
-                        <Product title="Cette haltère est malgique 😍" price={29.99} rating={5} image="http://assets.stickpng.com/images/5a5e10a99fc8c9351ecc499c.png" />
+                        <Product id={uuidv4()}title="Cette haltère est malgique 😍" price={29.99} rating={5} image="http://assets.stickpng.com/images/5a5e10a99fc8c9351ecc499c.png" />
                         <Product title="Haltère qui te fait gagner en rapidité" price={39.99} rating={5} image="https://cdn.tectake.fr/media/catalog/product/cache/1/small_image/1000x/0dc2d03fe217f8c83829496872af24a0/4/0/402586-2.jpg"/>
                         <Product title="Haltère qui te fait gagner en agilité" price={19.99} rating={5} image="https://cdn1.sveltus.com/2992-superlarge_default/haltere-hexagonale-10-kg-x1.jpg"/>
                     </div>
