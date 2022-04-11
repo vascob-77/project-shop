@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from "styled-components";
 
-const CheckoutProduct = () => {
+const CheckoutProduct = ({id,image,title,price}) => {
     return (
         <CheckoutProductInfo>
-            <img src="" alt="produit ajouté au panier" className="checkout-product"/>
+            <img src={image} alt="produit ajouté au panier" className="checkout-product"/>
 
             <div className="product-info">
-                <p className="checkoutProduct-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequatur consequuntur fuga labore sunt, veritatis.</p>
+                <p className="checkoutProduct-title">{title}</p>
                 <p className="checkoutProduct-price">
-                    <strong>10</strong>
+                    <strong>{price}</strong>
                     <small>€</small>
                 </p>
                 <div className="checkoutProduct-rating">
