@@ -39,7 +39,6 @@ const CheckoutSection = styled.section`
   padding: 20px;
   background: white;
   height: max-content;
-  
   .checkout-title{
     margin-right: 10px;
     padding: 10px;
@@ -49,6 +48,7 @@ const CheckoutSection = styled.section`
   .checkout-left{
     display: flex;
     flex-direction: column;
+    margin-right: auto;
   }
 `
 

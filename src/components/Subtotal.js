@@ -9,6 +9,7 @@ const Subtotal = () => {
     const [{basket}, dispatch] = useStateValue()
     console.log(basket.length)
     return (
+
         <SubTotal>
             <CurrencyFormat
                 renderText={(value) => (
@@ -44,7 +45,6 @@ const SubTotal = styled.div`
   background: #f3f3f3;
   border:1px solid #dddddd;
   border-radius:3px;
-  
   .subtotal-gift{
     display: flex;
     align-items: center;
